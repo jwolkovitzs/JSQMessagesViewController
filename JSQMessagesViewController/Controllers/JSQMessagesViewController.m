@@ -557,6 +557,7 @@ JSQMessagesKeyboardControllerDelegate>
 
     if (!isMediaMessage) {
         cell.textView.text = [messageItem text];
+        cell.textView.delegate = self;
 
         if ([UIDevice jsq_isCurrentDeviceBeforeiOS8]) {
             //  workaround for iOS 7 textView data detectors bug
